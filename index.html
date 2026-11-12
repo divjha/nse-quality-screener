@@ -1,155 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101827">
-<title>NSE Quality Screener</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1220"><title>Northstar Equity Research</title>
 <style>
-:root{--bg:#0b1220;--panel:#151f30;--muted:#91a0b7;--text:#eef3fc;--accent:#67d5b5;--line:#29364b}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px system-ui,Arial}
-header{padding:22px 17px;background:#101827;border-bottom:1px solid var(--line)}
-h1{font-size:22px;margin:0 0 5px}p{color:var(--muted);margin:5px 0}
-main{padding:15px;max-width:850px;margin:auto}
-nav{display:flex;gap:8px;overflow:auto;margin:14px 0}
-button{background:#26354b;color:var(--text);border:1px solid var(--line);padding:10px 13px;border-radius:9px;font-weight:600}
-button.active,.primary{background:var(--accent);color:#071b19;border-color:var(--accent)}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px;margin:12px 0}
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.stat strong{font-size:23px;display:block;margin-top:5px}
-label{display:block;color:var(--muted);font-size:13px;margin:12px 0 5px}
-input,select{width:100%;padding:12px;background:#0d1727;color:var(--text);border:1px solid var(--line);border-radius:8px;font-size:15px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.stock{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.score{font-size:21px;font-weight:800;color:var(--accent)}
-.small{font-size:12px;color:var(--muted)}
-.hidden{display:none}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-hr{border:0;border-top:1px solid var(--line);margin:14px 0}
-@media(min-width:650px){.stats{grid-template-columns:repeat(4,1fr)}}
-</style>
-</head>
-<body>
-<header>
-<h1>📊 NSE Quality Screener</h1>
-<p>Fundamentals first. Valuation second. Entry discipline always.</p>
-</header>
+:root{--bg:#0b1220;--p:#142136;--p2:#1a2a40;--line:#2b3c54;--t:#edf3fc;--m:#93a6bf;--a:#75dfbd;--b:#83baff;--r:15px}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0,#19334b,transparent 38%),var(--bg);color:var(--t);font:14px/1.5 system-ui,Arial}header{position:sticky;top:0;z-index:4;background:#0b1220ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:16px}.wrap,main{max-width:1080px;margin:auto}.brand{display:flex;align-items:center;gap:10px}.logo{background:linear-gradient(135deg,var(--a),var(--b));color:#08221d;border-radius:12px;padding:8px 12px;font-weight:900;font-size:18px}h1{font-size:17px;margin:0}.sub,.muted,.tiny{color:var(--m)}.sub{font-size:11px}nav{display:flex;gap:7px;overflow:auto;margin-top:13px}button{border:1px solid var(--line);background:var(--p2);color:var(--t);border-radius:10px;padding:9px 12px;font-weight:650;cursor:pointer;white-space:nowrap}button.active,button.primary{background:var(--a);color:#08221d;border-color:var(--a)}main{padding:18px 15px 50px}.page{display:none}.page.active{display:block}.hero{display:flex;justify-content:space-between;gap:12px;align-items:end;flex-wrap:wrap;margin:5px 0 17px}h2{font-size:23px;margin:0}h3{font-size:15px;margin:0 0 12px}.card{background:linear-gradient(150deg,#17263b,#111c2d);border:1px solid var(--line);border-radius:var(--r);padding:15px;margin-bottom:12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat{font-size:27px;font-weight:800}.tiny{font-size:11px}.pill{font-size:10px;padding:4px 8px;border:1px solid #38506c;border-radius:20px;color:#c0d5eb}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.score{font-size:20px;font-weight:800;color:var(--a)}label{display:block;color:#b7c6d8;font-size:12px;margin:10px 0 5px}input,select,textarea{width:100%;background:#0b1524;color:var(--t);border:1px solid #344861;border-radius:9px;padding:11px;font:inherit}textarea{min-height:70px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 10px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.stock{padding:12px 0;border-bottom:1px solid var(--line)}.notice{background:#2b251a;border:1px solid #68512b;color:#f4dca9;border-radius:12px;padding:12px;font-size:12px;margin-bottom:12px}.empty{padding:20px;text-align:center;color:var(--m)}a{color:var(--b);overflow-wrap:anywhere}@media(min-width:700px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.formgrid{grid-template-columns:repeat(3,minmax(0,1fr))}main{padding-top:25px}}
+</style></head><body><header><div class="wrap"><div class="brand"><div class="logo">N</div><div><h1>NORTHSTAR EQUITY</h1><div class="sub">Fundamental research · Valuation discipline · Evidence-led decisions</div></div></div><nav id="nav"><button class="active" data-page="home">Overview</button><button data-page="list">Universe</button><button data-page="research">Research desk</button><button data-page="events">News & events</button><button data-page="data">Data centre</button><button data-page="method">Methodology</button></nav></div></header>
 <main>
-<nav>
-<button class="active" data-tab="overview">Overview</button>
-<button data-tab="universe">Stock universe</button>
-<button data-tab="add">Add stock</button>
-<button data-tab="method">Methodology</button>
-</nav>
-
-<section id="overview">
-<div class="stats">
-<div class="card stat">Stocks tracked<strong id="total">0</strong></div>
-<div class="card stat">Average score<strong id="average">—</strong></div>
-<div class="card stat">Top score<strong id="top">—</strong></div>
-<div class="card stat">Buy-watch candidates<strong id="candidates">0</strong></div>
-</div>
-<div class="card">
-<h3>Highest-scoring stocks</h3>
-<div id="leaders"></div>
-</div>
-<div class="card">
-<h3>Screening discipline</h3>
-<p>Scores are research priorities, not automatic buy recommendations. Verify financial statements, valuations and current prices before investing.</p>
-</div>
-</section>
-
-<section id="universe" class="hidden">
-<div class="card">
-<h3>Stock universe</h3>
-<input id="search" placeholder="Search company or symbol..." oninput="render()">
-<div id="stocks"></div>
-</div>
-</section>
-
-<section id="add" class="hidden">
-<div class="card">
-<h3 id="formtitle">Add a stock</h3>
-<form id="stockform">
-<input type="hidden" id="editid">
-<label>Company name</label><input id="name" required placeholder="ICICI Bank">
-<label>NSE symbol</label><input id="symbol" required placeholder="ICICIBANK">
-<label>Sector</label>
-<select id="sector">
-<option>Bank</option><option>Financial Services</option><option>IT</option>
-<option>Consumer</option><option>Industrials</option><option>Healthcare</option>
-<option>Auto</option><option>Energy</option><option>Other</option>
-</select>
-<div class="grid">
-<div><label>Business quality (0–25)</label><input id="quality" type="number" min="0" max="25" value="15" required></div>
-<div><label>Growth (0–25)</label><input id="growth" type="number" min="0" max="25" value="15" required></div>
-<div><label>Financial strength (0–20)</label><input id="strength" type="number" min="0" max="20" value="12" required></div>
-<div><label>Valuation (0–20)</label><input id="valuation" type="number" min="0" max="20" value="10" required></div>
-<div><label>Technical entry (0–10)</label><input id="technical" type="number" min="0" max="10" value="5" required></div>
-</div>
-<label>Research notes</label><input id="notes" placeholder="Risks, results, valuation observations">
-<div class="actions"><button class="primary" type="submit">Save stock</button><button type="reset" onclick="resetForm()">Clear</button></div>
-</form>
-<p class="small">Enter scores based on your research. The app does not fetch live NSE data yet.</p>
-</div>
-</section>
-
-<section id="method" class="hidden">
-<div class="card">
-<h3>Our 100-point framework</h3>
-<p><b>Business quality — 25:</b> Competitive advantage, management, consistency and business durability.</p>
-<p><b>Growth — 25:</b> Revenue, profit and earnings growth; sector outlook.</p>
-<p><b>Financial strength — 20:</b> Debt, cash flow, capital efficiency and balance-sheet resilience.</p>
-<p><b>Valuation — 20:</b> P/E, P/B, EV/EBITDA, historical valuation and margin of safety.</p>
-<p><b>Technical entry — 10:</b> Trend, moving averages, momentum and risk/reward.</p>
-<hr>
-<h3>Bank-specific research</h3>
-<p>For banks, assess ROA, ROE, NIM, GNPA, NNPA, credit cost, CASA, capital adequacy, deposit growth and loan growth. Do not use industrial-company debt metrics blindly.</p>
-<hr>
-<p><b>Score interpretation</b></p>
-<p>80–100: Strong research candidate<br>65–79: Worth deeper research<br>50–64: Watch / improve evidence<br>Below 50: Low priority</p>
-<p class="small">A high score is not a buy signal. Valuation, risks and evidence must be independently verified.</p>
-</div>
-</section>
+<section id="home" class="page active"><div class="hero"><div><h2>Investment intelligence</h2><div class="muted">Find durable businesses. Demand evidence. Wait for attractive valuations.</div></div><span class="pill">LOCAL MODE · v0.2</span></div><div class="notice">No live NSE/BSE feed is connected in this version. Enter or import verified facts. Missing metrics remain unknown and reduce data confidence.</div><div class="grid"><div class="card"><div class="tiny">Companies tracked</div><div class="stat" id="n">0</div></div><div class="card"><div class="tiny">Research-ready</div><div class="stat" id="ready">0</div></div><div class="card"><div class="tiny">Attractive valuation</div><div class="stat" id="value">0</div></div><div class="card"><div class="tiny">Open events</div><div class="stat" id="evcount">0</div></div></div><div class="card"><h3>Highest research scores</h3><div id="leaders" class="empty">Add a company to begin.</div></div><div class="card"><h3>Our discipline</h3><p class="muted">Quality before price. Price before position size. Evidence before conviction. Scores prioritise research; they are not guaranteed predictions or automatic buy signals.</p></div></section>
+<section id="list" class="page"><div class="hero"><div><h2>Company universe</h2><div class="muted">Curated NSE/BSE research list</div></div><button class="primary" onclick="newCompany()">+ Add company</button></div><div class="card"><input id="search" placeholder="Search company, symbol, ISIN…" oninput="renderList()"><div id="companies"></div></div></section>
+<section id="research" class="page"><div class="hero"><div><h2>Research desk</h2><div class="muted">Sector-aware metrics and transparent scoring</div></div></div><div class="card"><h3 id="heading">Company research record</h3><form id="form"><input id="id" type="hidden"><div class="formgrid"><div><label>Company name *</label><input id="name" required></div><div><label>NSE symbol</label><input id="symbol"></div><div><label>BSE code</label><input id="bse" ></div><div><label>ISIN</label><input id="isin"></div><div><label>Sector</label><select id="sector"><option>Bank</option><option>NBFC</option><option>IT</option><option>Manufacturing</option><option>Insurance</option><option>Other</option></select></div><div><label>Financial period</label><input id="period" placeholder="Q2 FY27 / FY2026"></div><div><label>Source URL</label><input id="source" type="url" placeholder="Official filing or factsheet link"></div><div><label>Source type</label><select id="sourceType"><option>NSE filing</option><option>BSE filing</option><option>Annual report</option><option>Quarterly results</option><option>Investor presentation</option><option>Factsheet / provider</option><option>Manual estimate</option></select></div><div><label>Verified date</label><input id="verified" type="date"></div></div><h3 style="margin-top:18px">Fundamental metrics <span class="tiny">· leave unknown values blank</span></h3><div class="formgrid" id="metrics"></div><h3 style="margin-top:18px">Analyst assessment (0–5)</h3><div class="formgrid"><div><label>Business durability</label><input id="durability" type="number" min="0" max="5" step=".5"></div><div><label>Management / governance</label><input id="governance" type="number" min="0" max="5" step=".5"></div><div><label>Valuation attractiveness</label><input id="valuation" type="number" min="0" max="5" step=".5"></div><div><label>Technical entry setup</label><input id="technical" type="number" min="0" max="5" step=".5"></div></div><label>Thesis, risks and invalidation conditions</label><textarea id="thesis"></textarea><div class="actions"><button class="primary" type="submit">Save research</button><button type="button" onclick="resetForm()">Clear</button></div></form></div><div id="snapshot"></div></section>
+<section id="events" class="page"><div class="hero"><div><h2>News & event intelligence</h2><div class="muted">Track material developments against primary evidence</div></div></div><div class="notice">No automatic news feed yet. Record events manually or import them later. Verify headlines against original exchange/company disclosures. News alone never changes the fundamental score.</div><div class="card"><h3>Log an event</h3><form id="eventForm"><div class="formgrid"><div><label>Company / symbol</label><input id="ec" required></div><div><label>Category</label><select id="et"><option>Results / guidance</option><option>Order win / cancellation</option><option>Promoter / pledge</option><option>Management change</option><option>Auditor / governance</option><option>Regulatory / legal</option><option>Fundraising / dilution</option><option>Credit rating</option><option>Capex / acquisition</option><option>Operational disruption</option><option>Dividend / buyback</option><option>Sector / macro</option><option>Other</option></select></div><div><label>Event date</label><input id="ed" type="date"></div><div><label>Initial assessment</label><select id="ei"><option>Needs review</option><option>Potentially positive</option><option>Potentially negative</option><option>Neutral</option></select></div></div><label>Headline / event summary</label><input id="eh" required><label>Source URL</label><input id="eu" type="url"><label>Why it matters / follow-up</label><textarea id="en"></textarea><div class="actions"><button class="primary">Add event</button></div></form></div><div class="card"><h3>Event register</h3><div id="eventsList"></div></div></section>
+<section id="data" class="page"><div class="hero"><div><h2>Data centre</h2><div class="muted">Backups and CSV import</div></div></div><div class="grid"><div class="card"><h3>Export research backup</h3><p class="muted">Download companies and events as JSON.</p><button class="primary" onclick="exportJSON()">Download JSON</button></div><div class="card"><h3>Import backup</h3><input id="jsonFile" type="file" accept=".json"><button onclick="importJSON()">Import JSON</button></div><div class="card"><h3>CSV company import</h3><p class="muted">Download the column template, fill it with verified data, then import.</p><button onclick="template()">Download CSV template</button><label>CSV file</label><input id="csvFile" type="file" accept=".csv"><button onclick="importCSV()">Import CSV</button></div><div class="card"><h3>Data integrity</h3><div id="integrity"></div></div></div><div class="card"><h3>Source policy</h3><p class="muted">Prefer NSE/BSE disclosures, audited reports, company investor-relations documents and permitted data feeds. Preserve reporting period, consolidated/standalone basis, units, source URL and verification date. Do not scrape exchange sites or bypass access controls.</p></div></section>
+<section id="method" class="page"><div class="hero"><div><h2>Methodology</h2><div class="muted">How we assess companies</div></div></div><div class="card"><h3>Research score architecture</h3><p>Fundamental proxy: up to 70 points from sector metrics, durability and governance. Valuation: up to 20 points. Technical entry: up to 10 points.</p><p class="muted">Current thresholds are indicative research heuristics, not universal truths. Compare peers, business models, accounting policies and cycles before making decisions.</p></div><div class="grid"><div class="card"><h3>Banks</h3><p class="muted">ROA, ROE, NIM, GNPA, NNPA, credit cost, CASA, capital adequacy, loan/deposit growth. Also inspect slippages, provisions, liquidity and unsecured exposure.</p></div><div class="card"><h3>NBFCs</h3><p class="muted">AUM growth, spreads, cost of funds, GNPA/NNPA, credit cost, collections, ALM, capital adequacy and leverage.</p></div><div class="card"><h3>IT services</h3><p class="muted">Revenue growth, EBIT margin, profit growth, ROE, cash conversion and attrition.</p></div><div class="card"><h3>Manufacturing</h3><p class="muted">Revenue/profit growth, EBITDA margin, ROCE, debt/equity, CFO/PAT and interest coverage.</p></div><div class="card"><h3>Insurance</h3><p class="muted">Premium growth, VNB margin, persistency, solvency, combined ratio and ROE.</p></div><div class="card"><h3>Other companies</h3><p class="muted">Revenue/profit CAGR, margins, ROCE/ROE, cash flow, debt, interest cover and working-capital cycle.</p></div></div><div class="card"><h3>Score vs confidence</h3><p class="muted">A score is not confidence. Missing metrics lower completeness. A high score with weak or stale evidence must not be treated as a strong investment case.</p></div></section>
 </main>
-
 <script>
-let data=JSON.parse(localStorage.getItem("nseStocks")||"[]");
-const fields=["quality","growth","strength","valuation","technical"];
-function score(s){return fields.reduce((a,k)=>a+Number(s[k]||0),0)}
-function save(){localStorage.setItem("nseStocks",JSON.stringify(data));render()}
-function render(){
- const sorted=[...data].sort((a,b)=>score(b)-score(a));
- document.getElementById("total").textContent=data.length;
- document.getElementById("average").textContent=data.length?Math.round(data.reduce((a,s)=>a+score(s),0)/data.length):"—";
- document.getElementById("top").textContent=sorted.length?score(sorted[0]):"—";
- document.getElementById("candidates").textContent=data.filter(s=>score(s)>=80).length;
- document.getElementById("leaders").innerHTML=sorted.slice(0,5).map(s=>`<div class="stock"><div><b>${esc(s.name)}</b><div class="small">${esc(s.symbol)} · ${esc(s.sector)}</div></div><span class="score">${score(s)}/100</span></div><hr>`).join("")||"<p>No stocks added yet.</p>";
- let q=(document.getElementById("search")?.value||"").toLowerCase();
- document.getElementById("stocks").innerHTML=sorted.filter(s=>(s.name+s.symbol+s.sector).toLowerCase().includes(q)).map(s=>`<div class="card"><div class="stock"><div><b>${esc(s.name)}</b><div class="small">${esc(s.symbol)} · ${esc(s.sector)}</div></div><span class="score">${score(s)}</span></div><p>${esc(s.notes||"No notes")}</p><div class="actions"><button onclick="editStock('${s.id}')">Edit</button><button onclick="removeStock('${s.id}')">Delete</button></div></div>`).join("")||"<p>No matching stocks.</p>";
-}
-function esc(x){return String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
- document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");
- document.querySelectorAll("main section").forEach(x=>x.classList.add("hidden"));
- document.getElementById(b.dataset.tab).classList.remove("hidden");
-});
-document.getElementById("stockform").onsubmit=e=>{
- e.preventDefault();
- let id=document.getElementById("editid").value||crypto.randomUUID();
- let s={id,name:name.value.trim(),symbol:symbol.value.trim().toUpperCase(),sector:sector.value,notes:notes.value};
- fields.forEach(k=>s[k]=Math.max(0,Math.min(Number(document.getElementById(k).max),Number(document.getElementById(k).value)||0)));
- data=data.filter(x=>x.id!==id);data.push(s);save();e.target.reset();resetForm();showTab("universe");
-};
-function editStock(id){
- let s=data.find(x=>x.id===id);if(!s)return;showTab("add");
- editid.value=s.id;name.value=s.name;symbol.value=s.symbol;sector.value=s.sector;notes.value=s.notes||"";
- fields.forEach(k=>document.getElementById(k).value=s[k]);
- formtitle.textContent="Edit stock";
-}
-function removeStock(id){if(confirm("Delete this stock?")){data=data.filter(x=>x.id!==id);save()}}
-function resetForm(){editid.value="";formtitle.textContent="Add a stock"}
-function showTab(t){document.querySelector(`[data-tab="${t}"]`).click()}
-render();
-</script>
-</body>
-</html>
+const KEY='northstar_v02';let db;try{db=JSON.parse(localStorage.getItem(KEY))||{companies:[],events:[]}}catch(e){db={companies:[],events:[]}}
+const $=x=>document.getElementById(x),sets={
+Bank:[['roa','ROA (%)'],['roe','ROE (%)'],['nim','NIM (%)'],['gnpa','GNPA (%)'],['nnpa','NNPA (%)'],['creditCost','Credit cost (%)'],['casa','CASA (%)'],['capital','Capital adequacy (%)'],['loanGrowth','Loan growth (%)'],['depositGrowth','Deposit growth (%)']],
+NBFC:[['aum','AUM growth (%)'],['nim','NIM / spread (%)'],['gnpa','GNPA (%)'],['nnpa','NNPA (%)'],['creditCost','Credit cost (%)'],['capital','Capital adequacy (%)'],['leverage','Leverage (x)'],['collection','Collection efficiency (%)']],
+IT:[['revenue','Revenue growth (%)'],['margin','EBIT margin (%)'],['profit','Profit growth (%)'],['roe','ROE (%)'],['cash','CFO / PAT (x)'],['attrition','Attrition (%)']],
+Manufacturing:[['revenue','Revenue growth (%)'],['margin','EBITDA margin (%)'],['profit','Profit growth (%)'],['roce','ROCE (%)'],['roe','ROE (%)'],['de','Debt / equity (x)'],['cash','CFO / PAT (x)'],['cover','Interest coverage (x)']],
+Insurance:[['premium','Premium growth (%)'],['vnb','VNB margin (%)'],['persistency','Persistency (%)'],['solvency','Solvency ratio (x)'],['combined','Combined ratio (%)'],['roe','ROE (%)']],
+Other:[['revenue','Revenue growth (%)'],['margin','Operating margin (%)'],['profit','Profit growth (%)'],['roce','ROCE (%)'],['roe','ROE (%)'],['de','Debt / equity (x)'],['cash','CFO / PAT (x)'],['cover','Interest coverage (x)']]};
+function esc(s){return String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]))}
+function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
+function page(id){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===id));window.scrollTo(0,0)}
+$('nav').onclick=e=>{let b=e.target.closest('button[data-page]');if(b)page(b.dataset.page)};
+function fields(v={}){$('metrics').innerHTML=sets[$('sector').value].map(x=>'<div><label>'+x[1]+'</label><input id="m_'+x[0]+'" type="number" step="any" placeholder="Unknown" value="'+(v[x[0]]??'')+'"></div>').join('')}
+$('sector').onchange=()=>fields();
+function vals(){let o={};sets[$('sector').value].forEach(x=>{let v=$('m_'+x[0]).value;o[x[0]]=v===''?null:Number(v)});return o}
+function completeness(c){let a=sets[c.sector]||sets.Other,filled=a.filter(x=>c.metrics&&c.metrics[x[0]]!==null&&c.metrics[x[0]]!==undefined).length;return{filled,total:a.length,pct:Math.round(filled/a.length*100)}}
+function score(c){let m=c.metrics||{},p=[],add=(id,fn)=>{if(m[id]!==null&&m[id]!==undefined)p.push(fn(Number(m[id])))};let up=(v,arr)=>{for(let x of arr)if(v>=x[0])return x[1];return 0},dn=(v,arr)=>{for(let x of arr)if(v<=x[0])return x[1];return 0};
+if(c.sector==='Bank'){add('roa',v=>up(v,[[1.5,5],[1.2,4],[1,3],[.75,2],[0,1]]));add('roe',v=>up(v,[[18,4],[15,3],[12,2],[8,1],[0,0]]));add('nim',v=>up(v,[[4,3],[3.5,2],[3,1],[0,0]]));add('gnpa',v=>dn(v,[[1,4],[2,3],[3,2],[5,1],[99,0]]));add('nnpa',v=>dn(v,[[.3,4],[.6,3],[1,2],[2,1],[99,0]]));add('creditCost',v=>dn(v,[[.5,3],[1,2],[1.5,1],[99,0]]));add('casa',v=>up(v,[[40,2],[30,1],[0,0]]));add('capital',v=>up(v,[[17,2],[14,1],[0,0]]));add('loanGrowth',v=>up(v,[[10,1],[0,0]]));add('depositGrowth',v=>up(v,[[10,1],[0,0]]))}
+else if(c.sector==='NBFC'){add('aum',v=>up(v,[[15,3],[10,2],[5,1],[0,0]]));add('nim',v=>up(v,[[8,2],[5,1],[0,0]]));add('gnpa',v=>dn(v,[[1.5,3],[3,2],[5,1],[99,0]]));add('nnpa',v=>dn(v,[[.8,3],[1.5,2],[3,1],[99,0]]));add('creditCost',v=>dn(v,[[1,2],[2,1],[99,0]]));add('capital',v=>up(v,[[20,2],[15,1],[0,0]]));add('leverage',v=>dn(v,[[4,2],[6,1],[99,0]]));add('collection',v=>up(v,[[98,2],[95,1],[0,0]]))}
+else{add('revenue',v=>up(v,[[15,3],[10,2],[5,1],[0,0]]));add('margin',v=>up(v,[[20,3],[15,2],[10,1],[0,0]]));add('profit',v=>up(v,[[15,3],[10,2],[5,1],[0,0]]));add('roce',v=>up(v,[[20,4],[15,3],[12,2],[8,1],[0,0]]));add('roe',v=>up(v,[[18,2],[12,1],[0,0]]));add('de',v=>dn(v,[[.3,2],[.7,1],[99,0]]));add('cash',v=>up(v,[[1,2],[.7,1],[0,0]]));add('cover',v=>up(v,[[5,2],[3,1],[0,0]]));add('attrition',v=>dn(v,[[12,2],[18,1],[99,0]]));add('premium',v=>up(v,[[15,3],[10,2],[5,1],[0,0]]));add('vnb',v=>up(v,[[25,3],[18,2],[12,1],[0,0]]));add('persistency',v=>up(v,[[85,3],[75,2],[65,1],[0,0]]));add('solvency',v=>up(v,[[2,2],[1.5,1],[0,0]]));add('combined',v=>dn(v,[[95,2],[100,1],[999,0]]))}
+let cap=c.sector==='Bank'?30:c.sector==='NBFC'?18:c.sector==='IT'?16:c.sector==='Insurance'?15:20;let mp=p.length?Math.round(Math.min(50,p.reduce((a,b)=>a+b,0))/cap*50):null;let fund=mp===null?null:Math.min(70,mp+Number(c.durability||0)*2+Number(c.governance||0)*2);let total=fund===null?null:Math.round(fund+Number(c.valuation||0)*4+Number(c.technical||0)*2);return{total,fund,known:p.length}}
+function status(c){let d=completeness(c);if(d.pct<60||score(c).total===null)return'Insufficient evidence';if(c.valuation>=4)return'Potentially attractive';if(c.valuation>=2.5)return'Watch valuation';return'Quality / price review'}
+function render(){ $('n').textContent=db.companies.length;$('ready').textContent=db.companies.filter(c=>completeness(c).pct>=60).length;$('value').textContent=db.companies.filter(c=>c.valuation>=4&&completeness(c).pct>=60).length;$('evcount').textContent=db.events.filter(x=>!x.closed).length;
+let ranked=db.companies.map(c=>({c,s:score(c)})).filter(x=>x.s.total!==null).sort((a,b)=>b.s.total-a.s.total);$('leaders').innerHTML=ranked.length?ranked.slice(0,5).map(x=>'<div class="stock row"><div><b>'+esc(x.c.name)+'</b><div class="tiny">'+esc(x.c.symbol||x.c.sector)+' · '+esc(status(x.c))+'</div></div><span class="score">'+x.s.total+'/100</span></div>').join(''):'<div class="empty">No scored companies yet.</div>';renderList();renderEvents();renderIntegrity();renderSnapshot()}
+function renderList(){let q=($('search')?.value||'').toLowerCase();let a=db.companies.filter(c=>(c.name+' '+c.symbol+' '+c.isin+' '+c.sector).toLowerCase().includes(q));$('companies').innerHTML=a.length?a.map(c=>'<div class="stock"><div class="row"><div><b>'+esc(c.name)+'</b><div class="tiny">'+esc(c.symbol||'No symbol')+' · '+esc(c.sector)+' · '+completeness(c).pct+'% data complete</div></div><div class="score">'+(score(c).total??'—')+'</div></div><div class="row" style="margin-top:8px"><span class="pill">'+esc(status(c))+'</span><div class="actions"><button onclick="editCompany(\''+c.id+'\')">Research</button><button onclick="delCompany(\''+c.id+'\')">Delete</button></div></div></div>').join(''):'<div class="empty">No companies yet.</div>'}
+function renderSnapshot(){let c=db.companies.find(x=>x.id===$('id').value);if(!c){$('snapshot').innerHTML='';return}let s=score(c),d=completeness(c);$('snapshot').innerHTML='<div class="card"><h3>Saved research snapshot · '+esc(c.name)+'</h3><div class="grid"><div>Research score<div class="stat">'+(s.total??'—')+'/100</div></div><div>Fundamental proxy<div class="stat">'+(s.fund??'—')+'/70</div></div><div>Data completeness<div class="stat">'+d.pct+'%</div></div><div>Metrics available<div class="stat">'+d.filled+'/'+d.total+'</div></div></div><p class="tiny">Rules-based research score, not a predictive probability. Validate peer context and source documents.</p></div>'}
+function renderEvents(){$('eventsList').innerHTML=db.events.length?[...db.events].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(e=>'<div class="stock"><div class="row"><b>'+esc(e.company)+'</b><span class="pill">'+esc(e.impact)+'</span></div><p>'+esc(e.headline)+'</p><div class="tiny">'+esc(e.date)+' · '+esc(e.type)+'</div>'+(e.url?'<a href="'+esc(e.url)+'" target="_blank" rel="noopener">Open source ↗</a>':'')+'<p class="tiny">'+esc(e.notes)+'</p><div class="actions"><button onclick="toggleEvent(\''+e.id+'\')">'+(e.closed?'Reopen':'Mark reviewed')+'</button><button onclick="delEvent(\''+e.id+'\')">Delete</button></div></div>').join(''):'<div class="empty">No events recorded.</div>'}
+function renderIntegrity(){let miss=db.companies.filter(c=>completeness(c).pct<100).length,nos=db.companies.filter(c=>!c.source).length;$('integrity').innerHTML='<p class="muted">Incomplete metric records: <b>'+miss+'</b></p><p class="muted">Missing source links: <b>'+nos+'</b></p><p class="muted">Event records: <b>'+db.events.length+'</b></p><p class="tiny">Browser localStorage only. Export backups regularly.</p>'}
+function newCompany(){resetForm();page('research')}
+function resetForm(){$('form').reset();$('id').value='';$('heading').textContent='Company research record';fields();$('snapshot').innerHTML=''}
+function editCompany(id){let c=db.companies.find(x=>x.id===id);if(!c)return;page('research');$('id').value=c.id;$('name').value=c.name;$('symbol').value=c.symbol;$('bse').value=c.bse;$('isin').value=c.isin;$('sector').value=c.sector;$('period').value=c.period;$('source').value=c.source;$('sourceType').value=c.sourceType;$('verified').value=c.verified;$('durability').value=c.durability;$('governance').value=c.governance;$('valuation').value=c.valuation;$('technical').value=c.technical;$('thesis').value=c.thesis;fields(c.metrics);$('heading').textContent='Edit: '+c.name;renderSnapshot()}
+function delCompany(id){if(confirm('Delete this company research record?')){db.companies=db.companies.filter(c=>c.id!==id);save()}}
+$('sector').onchange=()=>fields();
+$('form').onsubmit=e=>{e.preventDefault();let id=$('id').value||crypto.randomUUID(),c={id,name:$('name').value.trim(),symbol:$('symbol').value.trim().toUpperCase(),bse:$('bse').value.trim(),isin:$('isin').value.trim(),sector:$('sector').value,period:$('period').value,source:$('source').value,sourceType:$('sourceType').value,verified:$('verified').value,metrics:vals(),durability:Number($('durability').value||0),governance:Number($('governance').value||0),valuation:Number($('valuation').value||0),technical:Number($('technical').value||0),thesis:$('thesis').value,updated:new Date().toISOString()};db.companies=db.companies.filter(x=>x.id!==id);db.companies.push(c);save();$('id').value=id;$('heading').textContent='Saved: '+c.name;renderSnapshot()};
+$('eventForm').onsubmit=e=>{e.preventDefault();db.events.push({id:crypto.randomUUID(),company:$('ec').value,type:$('et').value,date:$('ed').value,impact:$('ei').value,headline:$('eh').value,url:$('eu').value,notes:$('en').value,closed:false});e.target.reset();save()};
+function toggleEvent(id){let e=db.events.find(x=>x.id===id);if(e)e.closed=!e.closed;save()}function delEvent(id){if(confirm('Delete event?')){db.events=db.events.filter(x=>x.id!==id);save()}}
+function dl(name,txt,type){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([txt],{type}));a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)}
+function exportJSON(){dl('northstar-backup.json',JSON.stringify(db,null,2),'application/json')}
+function importJSON(){let f=$('jsonFile').files[0];if(!f)return alert('Choose a backup first');let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!Array.isArray(x.companies)||!Array.isArray(x.events))throw Error('Invalid format');db=x;save();alert('Backup restored')}catch(e){alert('Import failed: '+e.message)}};r.readAsText(f)}
+function template(){dl('northstar-import-template.csv','name,symbol,bse,isin,sector,period,source,sourceType,verified,roa,roe,nim,gnpa,nnpa,creditCost,casa,capital,loanGrowth,depositGrowth,revenue,margin,profit,roce,de,cash,cover,durability,governance,valuation,technical,thesis\n','text/csv')}
+function importCSV(){let f=$('csvFile').files[0];if(!f)return alert('Choose CSV');let r=new FileReader();r.onload=()=>{try{let lines=r.result.split(/\r?\n/).filter(Boolean),h=lines.shift().split(',').map(x=>x.trim()),count=0;lines.forEach(line=>{let a=line.split(','),o={};h.forEach((k,i)=>o[k]=(a[i]||'').trim());if(!o.name)return;let sector=sets[o.sector]?o.sector:'Other',m={};sets[sector].forEach(x=>m[x[0]]=o[x[0]]===''||o[x[0]]===undefined?null:Number(o[x[0]]));db.companies.push({id:crypto.randomUUID(),name:o.name,symbol:o.symbol||'',bse:o.bse||'',isin:o.isin||'',sector,period:o.period||'',source:o.source||'',sourceType:o.sourceType||'Manual estimate',verified:o.verified||'',metrics:m,durability:Number(o.durability||0),governance:Number(o.governance||0),valuation:Number(o.valuation||0),technical:Number(o.technical||0),thesis:o.thesis||''});count++});save();alert('Imported '+count+' rows. Review each source and period.')}catch(e){alert('CSV import failed: '+e.message)}};r.readAsText(f)}
+fields();render();
+</script></body></html>
