@@ -69,13 +69,10 @@ async function fetchResearchDataset(){
  const companiesResponse=await fetch(base+'/api/companies',{cache:'no-store'});
  if(!companiesResponse.ok)throw Error('Company directory request failed');
  const directory=await companiesResponse.json();
- const batches=await Promise.all((directory.companies||[]).map(async company=>{
-  const response=await fetch(base+'/api/facts?symbol='+encodeURIComponent(company.symbol)+'&limit=2000',{cache:'no-store'});
-  if(!response.ok)throw Error('Facts request failed for '+company.symbol);
-  const payload=await response.json();
-  return (payload.facts||[]).map(f=>({symbol:f.symbol,company_name:f.company_name,sector:f.sector,period:f.period,period_type:f.period_type,consolidation:f.consolidation,metric:f.metric,value:f.value,unit:f.unit,currency:f.currency,source:{name:f.source_name,url:f.source_url,reported_date:f.reported_date,retrieved_at:f.retrieved_at}}));
- }));
- const records=batches.flat();
+ const factsResponse=await fetch(base+'/api/facts?limit=10000',{cache:'no-store'});
+ if(!factsResponse.ok)throw Error('Published facts request failed');
+ const payload=await factsResponse.json();
+ const records=(payload.facts||[]).map(f=>({symbol:f.symbol,company_name:f.company_name,sector:f.sector,period:f.period,period_type:f.period_type,consolidation:f.consolidation,metric:f.metric,value:f.value,unit:f.unit,currency:f.currency,source:{name:f.source_name,url:f.source_url,reported_date:f.reported_date,retrieved_at:f.retrieved_at}}));
  return {generated_at:new Date().toISOString(),record_count:records.length,records};
 }
 async function loadPublishedFacts(){const status=$('publishedStatus'),target=$('publishedFacts');status.textContent='Loading published dataset…';target.innerHTML='';try{let data,apiMode=false;const base=apiBase();if(base){try{data=await fetchResearchDataset();apiMode=true;$('apiConnectionStatus').textContent='Connected · '+data.record_count+' facts loaded'}catch(apiError){$('apiConnectionStatus').textContent='API unavailable · using static fallback';status.textContent='API unavailable ('+apiError.message+'); loading static published dataset instead.'}}if(!data){const response=await fetch('data/generated/financial_facts.json?ts='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status+' — dataset is not published at this site path yet');data=await response.json()}
