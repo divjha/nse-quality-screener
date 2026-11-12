@@ -128,7 +128,8 @@ def main():
         "input_rows_rejected": len(errors),
         "warnings": warnings + duplicates,
         "errors": errors,
-        "status": "review_required" if errors or warnings or duplicates else "passed",
+        "status": ("empty" if not rows and not errors else
+                   "review_required" if errors or warnings or duplicates else "passed"),
     }
     OUTPUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     REPORT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
