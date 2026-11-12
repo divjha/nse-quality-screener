@@ -8,6 +8,8 @@ on:
       - "scripts/build_dataset.py"
       - "scripts/build-d1-seed.mjs"
       - "worker/**"
+      - "index.html"
+      - "scripts/check-frontend.mjs"
       - "tests/**"
       - "migrations/**"
       - "package.json"
@@ -43,6 +45,8 @@ jobs:
           node-version: "22"
       - name: Check API and D1 seed generator syntax
         run: |
+          node --check scripts/check-frontend.mjs
+          node scripts/check-frontend.mjs
           node --check worker/index.js
           node --check scripts/build-d1-seed.mjs
           node --check tests/worker.test.mjs
