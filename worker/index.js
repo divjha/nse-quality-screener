@@ -22,7 +22,7 @@ export default {
     if (request.method !== "GET") return error("Read-only API: GET requests only", 405);
     if (url.pathname === "/health") return json({
       ok: true, service: "Northstar Equity API",
-      environment: env.APP_ENV || "unknown", dataMode: "database"
+      environment: env.APP_ENV || "unknown",\n      databaseConfigured: Boolean(env.DB),\n      dataMode: env.DB ? "database" : "unconfigured"
     });
     if (!env.DB) return error("Database binding is not configured", 503);
 
@@ -36,7 +36,7 @@ export default {
       if (url.pathname === "/api/facts") {
         const symbol = (url.searchParams.get("symbol") || "").trim().toUpperCase();
         if (!/^[A-Z0-9&.-]{1,20}$/.test(symbol)) return error("Provide a valid NSE symbol");
-        const limit = Math.min(Math.max(Number(url.searchParams.get("limit") || 500), 1), 2000);
+        const rawLimit = url.searchParams.get("limit");\n        const parsedLimit = rawLimit === null || rawLimit === "" ? 500 : Number(rawLimit);\n        if (!Number.isInteger(parsedLimit) || parsedLimit < 1) return error("Limit must be a positive whole number");\n        const limit = Math.min(parsedLimit, 2000);
         const { results } = await env.DB.prepare(
           "SELECT f.symbol, c.company_name, c.sector, f.period, f.period_type, f.consolidation, f.metric, f.value, f.unit, f.currency, s.source_name, s.source_url, s.reported_date, s.retrieved_at FROM financial_facts f JOIN companies c ON c.symbol = f.symbol JOIN sources s ON s.source_id = f.source_id WHERE f.symbol = ? ORDER BY f.period_type, f.period DESC, f.metric LIMIT ?"
         ).bind(symbol, limit).all();
