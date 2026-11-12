@@ -53,6 +53,21 @@ test("data routes report a missing database binding clearly", async () => {
   assert.match(body.error, /Database binding/);
 });
 
+test("facts route supports a single batched universe request", async () => {
+  const { status, body } = await readJson(await worker.fetch(makeRequest("/api/facts?limit=1000"), mockEnv()));
+  assert.equal(status, 200);
+  assert.equal(body.symbol, null);
+  assert.equal(body.count, fixture.length);
+  assert.equal(body.facts.length, fixture.length);
+});
+
+test("facts route still supports symbol-scoped requests", async () => {
+  const { status, body } = await readJson(await worker.fetch(makeRequest("/api/facts?symbol=SBIN"), mockEnv()));
+  assert.equal(status, 200);
+  assert.equal(body.symbol, "SBIN");
+  assert.equal(body.facts.length, fixture.length);
+});
+
 test("facts route validates the symbol before querying", async () => {
   const { status, body } = await readJson(await worker.fetch(makeRequest("/api/facts?symbol=bad%20symbol"), mockEnv()));
   assert.equal(status, 400);
