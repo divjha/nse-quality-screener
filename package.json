@@ -1,0 +1,13 @@
+{
+  "name": "northstar-equity",
+  "private": true,
+  "version": "0.6.0",
+  "type": "module",
+  "scripts": {
+    "dev:api": "wrangler dev",
+    "deploy:api": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply northstar-db --local",
+    "db:remote": "wrangler d1 migrations apply northstar-db --remote"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" }
+}
