@@ -1,41 +1,8 @@
 {
-  "generated_at": "2026-11-12T09:38:19.937212+00:00",
+  "generated_at": "2026-11-12T09:38:36.154827+00:00",
   "input_rows_accepted": 8,
   "input_rows_rejected": 0,
-  "warnings": [
-    {
-      "line": 2,
-      "warning": "missing_isin"
-    },
-    {
-      "line": 3,
-      "warning": "missing_isin"
-    },
-    {
-      "line": 4,
-      "warning": "missing_isin"
-    },
-    {
-      "line": 5,
-      "warning": "missing_isin"
-    },
-    {
-      "line": 6,
-      "warning": "missing_isin"
-    },
-    {
-      "line": 7,
-      "warning": "missing_isin"
-    },
-    {
-      "line": 8,
-      "warning": "missing_isin"
-    },
-    {
-      "line": 9,
-      "warning": "missing_isin"
-    }
-  ],
+  "warnings": [],
   "errors": [],
-  "status": "review_required"
+  "status": "passed"
 }

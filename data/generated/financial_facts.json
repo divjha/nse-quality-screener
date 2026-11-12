@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T09:38:19.937212+00:00",
+  "generated_at": "2026-11-12T09:38:36.154827+00:00",
   "input_file": "data/inbox/financial_facts.csv",
-  "input_sha256": "d714c3c89327c13932d99d5b2ac7978b57045b10b6b73faefa86ed12f5725f96",
+  "input_sha256": "696b5771750840f48e8676c326ea2617a7a83954e9efece804ca115596e1bdf2",
   "record_count": 8,
   "records": [
     {
       "symbol": "ICICIBANK",
-      "isin": "",
+      "isin": "INE090A01021",
       "company_name": "ICICI Bank",
       "sector": "Bank",
       "period": "Q2 FY2026",
@@ -25,7 +25,7 @@
     },
     {
       "symbol": "ICICIBANK",
-      "isin": "",
+      "isin": "INE090A01021",
       "company_name": "ICICI Bank",
       "sector": "Bank",
       "period": "Q2 FY2027",
@@ -43,7 +43,7 @@
     },
     {
       "symbol": "ICICIBANK",
-      "isin": "",
+      "isin": "INE090A01021",
       "company_name": "ICICI Bank",
       "sector": "Bank",
       "period": "Q2 FY2026",
@@ -61,7 +61,7 @@
     },
     {
       "symbol": "ICICIBANK",
-      "isin": "",
+      "isin": "INE090A01021",
       "company_name": "ICICI Bank",
       "sector": "Bank",
       "period": "Q2 FY2027",
@@ -79,7 +79,7 @@
     },
     {
       "symbol": "ICICIBANK",
-      "isin": "",
+      "isin": "INE090A01021",
       "company_name": "ICICI Bank",
       "sector": "Bank",
       "period": "Q2 FY2026",
@@ -97,7 +97,7 @@
     },
     {
       "symbol": "ICICIBANK",
-      "isin": "",
+      "isin": "INE090A01021",
       "company_name": "ICICI Bank",
       "sector": "Bank",
       "period": "Q2 FY2027",
@@ -115,7 +115,7 @@
     },
     {
       "symbol": "ICICIBANK",
-      "isin": "",
+      "isin": "INE090A01021",
       "company_name": "ICICI Bank",
       "sector": "Bank",
       "period": "Q2 FY2026",
@@ -133,7 +133,7 @@
     },
     {
       "symbol": "ICICIBANK",
-      "isin": "",
+      "isin": "INE090A01021",
       "company_name": "ICICI Bank",
       "sector": "Bank",
       "period": "Q2 FY2027",
