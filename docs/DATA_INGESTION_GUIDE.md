@@ -63,3 +63,8 @@ For every extracted value, record the exact document URL and page/table referenc
 - Pharmaceuticals: revenue by geography/business, product concentration, R&D, gross margin, EBITDA margin, cash conversion, regulatory observations and acquisition effects.
 
 The pilot should first cover FY2022–FY2026 annual periods, then add quarterly periods where comparable and available. Do not calculate a five-year trend from inconsistent or unreconciled periods.
+
+## Loaded bank-history pilot (12 Nov 2026)
+- SBI: FY2022–FY2026 annual ROA, ROE, NIM, GNPA, NNPA and capital adequacy (30 records), sourced from SBI's official five-year financial highlights page.
+- ICICI Bank: FY2025–FY2026 PAT/average total assets, GNPA, NNPA and capital adequacy (8 records), sourced from ICRA's 23 Oct 2026 rating rationale, page 5. These ratios are ICRA-calculated; retain that provenance and do not assume definitions are identical to SBI's published ratios.
+- The dashboard shows blank cells for periods not yet loaded. A blank means unknown/not yet sourced, never zero.
