@@ -14,6 +14,7 @@
 - GET /api/companies — published company directory and fact counts.
 - GET /api/facts?symbol=SBIN — source-linked facts for one company.
 - GET /api/metrics?symbol=SBIN&metric=ROA — time series for a metric.
+- GET /api/analysis?symbol=SBIN — year-over-year comparisons only where the same metric, fiscal period, period type and consolidation basis exist.
 
 The API is intentionally read-only. No unauthenticated write endpoint is exposed.
 
@@ -21,11 +22,17 @@ The API is intentionally read-only. No unauthenticated write endpoint is exposed
 
 1. Install Node.js LTS.
 2. Run npm install.
-3. Create a local D1 database with npm run db:local.
-4. Run npm run dev:api.
-5. Test /health, then the data routes after loading seed data.
+3. Apply the local schema with npm run db:local.
+4. Generate and import the current validated JSON dataset with npm run seed:local.
+5. Start the API with npm run dev:api.
+6. Test /health, /api/companies, /api/facts?symbol=SBIN and /api/analysis?symbol=SBIN.
+7. Verify local row counts with npm run check:local.
 
-The D1 database ID in wrangler.toml is a placeholder. Replace it only after creating a D1 database in the user's Cloudflare account. Do not add API tokens or credentials to Git.
+The D1 database ID in wrangler.toml is a local-development placeholder UUID. Replace it only after creating a D1 database in the user's Cloudflare account. The seed generator validates the published JSON, retains source links and reporting metadata, and produces an idempotent SQL file. It does not fetch new market data. Do not add API tokens or credentials to Git.
+
+## Analysis safeguards
+
+Year-over-year calculations are returned only when the same metric has a matching prior-year quarter or fiscal year with identical period type and consolidation basis. No growth rate is inferred when a comparable period is missing or the prior value is non-positive. This is historical comparison, not a forecast.
 
 ## Deployment safety
 
