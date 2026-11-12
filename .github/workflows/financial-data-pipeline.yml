@@ -40,5 +40,7 @@ jobs:
             echo "No generated data changes."
           else
             git commit -m "Build validated financial facts dataset"
+            # Rebase on commits made while the runner was processing the CSV.
+            git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
           fi
