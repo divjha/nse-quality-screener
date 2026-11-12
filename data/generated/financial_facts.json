@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T10:26:03.591001+00:00",
+  "generated_at": "2026-11-12T10:26:16.496234+00:00",
   "input_file": "data/inbox/financial_facts.csv",
-  "input_sha256": "228f05ec881e9d72a16ab70ebaffe3169ce2f952b4502c10b2661280ffb73ea9",
-  "record_count": 142,
+  "input_sha256": "a9d274aa4b4a2902560301cec3d1bdb4646403c88fe5ac7a62c315caa642dee2",
+  "record_count": 154,
   "records": [
     {
       "symbol": "ICICIBANK",
@@ -2559,6 +2559,222 @@
         "name": "TCS Q2 FY2027 official financial results",
         "url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q2-fy-2027",
         "reported_date": "2026-10-08"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Gross revenue",
+      "value": 21047.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Gross revenue",
+      "value": 30431.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Net revenue",
+      "value": 19455.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Net revenue",
+      "value": 20454.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "EBITDA",
+      "value": 6695.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "EBITDA",
+      "value": 5645.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "PBT before exceptional items",
+      "value": 6891.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "PBT before exceptional items",
+      "value": 5720.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "PAT before exceptional items",
+      "value": 5121.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "PAT before exceptional items",
+      "value": 4249.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "PAT",
+      "value": 5187.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "ITC",
+      "isin": "INE154A01025",
+      "company_name": "ITC Limited",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "PAT",
+      "value": 4229.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ITC Q2 FY2027 official consolidated results presentation",
+        "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
+        "reported_date": "2026-11-02"
       }
     }
   ]
