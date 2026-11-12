@@ -1,0 +1,42 @@
+name: Financial data pipeline
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/inbox/financial_facts.csv"
+      - "scripts/build_dataset.py"
+      - ".github/workflows/financial-data-pipeline.yml"
+  schedule:
+    - cron: "25 3 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: financial-data-pipeline
+  cancel-in-progress: false
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate and build financial dataset
+        run: python scripts/build_dataset.py
+      - name: Commit generated dataset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/generated/financial_facts.json data/generated/data_quality_report.json
+          if git diff --cached --quiet; then
+            echo "No generated data changes."
+          else
+            git commit -m "Build validated financial facts dataset"
+            git push
+          fi
