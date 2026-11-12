@@ -40,7 +40,19 @@ jobs:
             echo "No generated data changes."
           else
             git commit -m "Build validated financial facts dataset"
-            # Rebase on commits made while the runner was processing the CSV.
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push
+            # Retry if a concurrent repository update lands between fetch and push.
+            pushed=false
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin "${GITHUB_REF_NAME}"
+              if git push; then
+                pushed=true
+                break
+              fi
+              echo "Push attempt ${attempt} failed; retrying after refreshing remote."
+              sleep 2
+            done
+            if [ "${pushed}" != "true" ]; then
+              echo "Could not publish generated data after five attempts."
+              exit 1
+            fi
           fi
