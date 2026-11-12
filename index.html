@@ -57,7 +57,7 @@ function dl(name,txt,type){let a=document.createElement('a'),u=URL.createObjectU
 function exportJSON(){dl('northstar-backup.json',JSON.stringify(db,null,2),'application/json')}
 function importJSON(){let f=$('jsonFile').files[0];if(!f)return alert('Choose a backup first');let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!Array.isArray(x.companies)||!Array.isArray(x.events))throw Error('Invalid format');db=x;save();alert('Backup restored')}catch(e){alert('Import failed: '+e.message)}};r.readAsText(f)}
 const API_CONFIG_KEY='northstar_api_base_url';
-function apiBase(){return (localStorage.getItem(API_CONFIG_KEY)||'').trim().replace(/\\/+$/,'')}
+function apiBase(){return (localStorage.getItem(API_CONFIG_KEY)||'').trim().replace(/\/+$/,'')}
 function saveApiConfig(){const raw=$('apiBaseUrl').value.trim();if(raw){let u;try{u=new URL(raw)}catch(e){return alert('Enter a valid HTTPS API base URL')}if(u.protocol!=='https:')return alert('Only HTTPS API URLs are allowed')}localStorage.setItem(API_CONFIG_KEY,raw);$('apiConnectionStatus').textContent=raw?'API URL saved · not yet verified':'Static dataset mode';loadPublishedFacts()}
 async function testApiConnection(){const base=apiBase();if(!base){$('apiConnectionStatus').textContent='No API URL · static mode';return}const status=$('apiConnectionStatus');status.textContent='Testing…';try{const r=await fetch(base+'/health',{cache:'no-store'});const j=await r.json();if(!r.ok||!j.ok)throw Error(j.error||'Health check failed');status.textContent=j.databaseConfigured?'API healthy · database configured':'API reachable · database not configured';}catch(e){status.textContent='Connection failed: '+e.message}}
 async function fetchResearchDataset(){
