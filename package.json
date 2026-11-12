@@ -4,6 +4,7 @@
   "version": "0.6.0",
   "type": "module",
   "scripts": {
+    "test:api": "node --test tests/worker.test.mjs",
     "dev:api": "wrangler dev",
     "deploy:api": "wrangler deploy",
     "db:local": "wrangler d1 migrations apply northstar-equity --local",
