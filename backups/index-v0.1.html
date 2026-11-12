@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>NSE Quality Screener</title>
+<style>
+:root{--bg:#0b1220;--panel:#151f30;--muted:#91a0b7;--text:#eef3fc;--accent:#67d5b5;--line:#29364b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px system-ui,Arial}
+header{padding:22px 17px;background:#101827;border-bottom:1px solid var(--line)}
+h1{font-size:22px;margin:0 0 5px}p{color:var(--muted);margin:5px 0}
+main{padding:15px;max-width:850px;margin:auto}
+nav{display:flex;gap:8px;overflow:auto;margin:14px 0}
+button{background:#26354b;color:var(--text);border:1px solid var(--line);padding:10px 13px;border-radius:9px;font-weight:600}
+button.active,.primary{background:var(--accent);color:#071b19;border-color:var(--accent)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px;margin:12px 0}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stat strong{font-size:23px;display:block;margin-top:5px}
+label{display:block;color:var(--muted);font-size:13px;margin:12px 0 5px}
+input,select{width:100%;padding:12px;background:#0d1727;color:var(--text);border:1px solid var(--line);border-radius:8px;font-size:15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stock{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.score{font-size:21px;font-weight:800;color:var(--accent)}
+.small{font-size:12px;color:var(--muted)}
+.hidden{display:none}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+@media(min-width:650px){.stats{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<header>
+<h1>📊 NSE Quality Screener</h1>
+<p>Fundamentals first. Valuation second. Entry discipline always.</p>
+</header>
+<main>
+<nav>
+<button class="active" data-tab="overview">Overview</button>
+<button data-tab="universe">Stock universe</button>
+<button data-tab="add">Add stock</button>
+<button data-tab="method">Methodology</button>
+</nav>
+
+<section id="overview">
+<div class="stats">
+<div class="card stat">Stocks tracked<strong id="total">0</strong></div>
+<div class="card stat">Average score<strong id="average">—</strong></div>
+<div class="card stat">Top score<strong id="top">—</strong></div>
+<div class="card stat">Buy-watch candidates<strong id="candidates">0</strong></div>
+</div>
+<div class="card">
+<h3>Highest-scoring stocks</h3>
+<div id="leaders"></div>
+</div>
+<div class="card">
+<h3>Screening discipline</h3>
+<p>Scores are research priorities, not automatic buy recommendations. Verify financial statements, valuations and current prices before investing.</p>
+</div>
+</section>
+
+<section id="universe" class="hidden">
+<div class="card">
+<h3>Stock universe</h3>
+<input id="search" placeholder="Search company or symbol..." oninput="render()">
+<div id="stocks"></div>
+</div>
+</section>
+
+<section id="add" class="hidden">
+<div class="card">
+<h3 id="formtitle">Add a stock</h3>
+<form id="stockform">
+<input type="hidden" id="editid">
+<label>Company name</label><input id="name" required placeholder="ICICI Bank">
+<label>NSE symbol</label><input id="symbol" required placeholder="ICICIBANK">
+<label>Sector</label>
+<select id="sector">
+<option>Bank</option><option>Financial Services</option><option>IT</option>
+<option>Consumer</option><option>Industrials</option><option>Healthcare</option>
+<option>Auto</option><option>Energy</option><option>Other</option>
+</select>
+<div class="grid">
+<div><label>Business quality (0–25)</label><input id="quality" type="number" min="0" max="25" value="15" required></div>
+<div><label>Growth (0–25)</label><input id="growth" type="number" min="0" max="25" value="15" required></div>
+<div><label>Financial strength (0–20)</label><input id="strength" type="number" min="0" max="20" value="12" required></div>
+<div><label>Valuation (0–20)</label><input id="valuation" type="number" min="0" max="20" value="10" required></div>
+<div><label>Technical entry (0–10)</label><input id="technical" type="number" min="0" max="10" value="5" required></div>
+</div>
+<label>Research notes</label><input id="notes" placeholder="Risks, results, valuation observations">
+<div class="actions"><button class="primary" type="submit">Save stock</button><button type="reset" onclick="resetForm()">Clear</button></div>
+</form>
+<p class="small">Enter scores based on your research. The app does not fetch live NSE data yet.</p>
+</div>
+</section>
+
+<section id="method" class="hidden">
+<div class="card">
+<h3>Our 100-point framework</h3>
+<p><b>Business quality — 25:</b> Competitive advantage, management, consistency and business durability.</p>
+<p><b>Growth — 25:</b> Revenue, profit and earnings growth; sector outlook.</p>
+<p><b>Financial strength — 20:</b> Debt, cash flow, capital efficiency and balance-sheet resilience.</p>
+<p><b>Valuation — 20:</b> P/E, P/B, EV/EBITDA, historical valuation and margin of safety.</p>
+<p><b>Technical entry — 10:</b> Trend, moving averages, momentum and risk/reward.</p>
+<hr>
+<h3>Bank-specific research</h3>
+<p>For banks, assess ROA, ROE, NIM, GNPA, NNPA, credit cost, CASA, capital adequacy, deposit growth and loan growth. Do not use industrial-company debt metrics blindly.</p>
+<hr>
+<p><b>Score interpretation</b></p>
+<p>80–100: Strong research candidate<br>65–79: Worth deeper research<br>50–64: Watch / improve evidence<br>Below 50: Low priority</p>
+<p class="small">A high score is not a buy signal. Valuation, risks and evidence must be independently verified.</p>
+</div>
+</section>
+</main>
+
+<script>
+let data=JSON.parse(localStorage.getItem("nseStocks")||"[]");
+const fields=["quality","growth","strength","valuation","technical"];
+function score(s){return fields.reduce((a,k)=>a+Number(s[k]||0),0)}
+function save(){localStorage.setItem("nseStocks",JSON.stringify(data));render()}
+function render(){
+ const sorted=[...data].sort((a,b)=>score(b)-score(a));
+ document.getElementById("total").textContent=data.length;
+ document.getElementById("average").textContent=data.length?Math.round(data.reduce((a,s)=>a+score(s),0)/data.length):"—";
+ document.getElementById("top").textContent=sorted.length?score(sorted[0]):"—";
+ document.getElementById("candidates").textContent=data.filter(s=>score(s)>=80).length;
+ document.getElementById("leaders").innerHTML=sorted.slice(0,5).map(s=>`<div class="stock"><div><b>${esc(s.name)}</b><div class="small">${esc(s.symbol)} · ${esc(s.sector)}</div></div><span class="score">${score(s)}/100</span></div><hr>`).join("")||"<p>No stocks added yet.</p>";
+ let q=(document.getElementById("search")?.value||"").toLowerCase();
+ document.getElementById("stocks").innerHTML=sorted.filter(s=>(s.name+s.symbol+s.sector).toLowerCase().includes(q)).map(s=>`<div class="card"><div class="stock"><div><b>${esc(s.name)}</b><div class="small">${esc(s.symbol)} · ${esc(s.sector)}</div></div><span class="score">${score(s)}</span></div><p>${esc(s.notes||"No notes")}</p><div class="actions"><button onclick="editStock('${s.id}')">Edit</button><button onclick="removeStock('${s.id}')">Delete</button></div></div>`).join("")||"<p>No matching stocks.</p>";
+}
+function esc(x){return String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
+ document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");
+ document.querySelectorAll("main section").forEach(x=>x.classList.add("hidden"));
+ document.getElementById(b.dataset.tab).classList.remove("hidden");
+});
+document.getElementById("stockform").onsubmit=e=>{
+ e.preventDefault();
+ let id=document.getElementById("editid").value||crypto.randomUUID();
+ let s={id,name:name.value.trim(),symbol:symbol.value.trim().toUpperCase(),sector:sector.value,notes:notes.value};
+ fields.forEach(k=>s[k]=Math.max(0,Math.min(Number(document.getElementById(k).max),Number(document.getElementById(k).value)||0)));
+ data=data.filter(x=>x.id!==id);data.push(s);save();e.target.reset();resetForm();showTab("universe");
+};
+function editStock(id){
+ let s=data.find(x=>x.id===id);if(!s)return;showTab("add");
+ editid.value=s.id;name.value=s.name;symbol.value=s.symbol;sector.value=s.sector;notes.value=s.notes||"";
+ fields.forEach(k=>document.getElementById(k).value=s[k]);
+ formtitle.textContent="Edit stock";
+}
+function removeStock(id){if(confirm("Delete this stock?")){data=data.filter(x=>x.id!==id);save()}}
+function resetForm(){editid.value="";formtitle.textContent="Add a stock"}
+function showTab(t){document.querySelector(`[data-tab="${t}"]`).click()}
+render();
+</script>
+</body>
+</html>
