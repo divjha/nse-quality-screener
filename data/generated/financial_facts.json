@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T09:38:36.154827+00:00",
+  "generated_at": "2026-11-12T09:40:11.600465+00:00",
   "input_file": "data/inbox/financial_facts.csv",
-  "input_sha256": "696b5771750840f48e8676c326ea2617a7a83954e9efece804ca115596e1bdf2",
-  "record_count": 8,
+  "input_sha256": "8a9bb69d45dd3dd090d5f5a188900a90170a2395889e53c50471bdc02d37c62b",
+  "record_count": 18,
   "records": [
     {
       "symbol": "ICICIBANK",
@@ -147,6 +147,186 @@
         "name": "ICICI Bank Q2 FY2027 Performance Review",
         "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
         "reported_date": "2026-10-17"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "NII",
+      "value": 42847.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "NII",
+      "value": 49143.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Domestic NIM",
+      "value": 3.08,
+      "unit": "percent",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Domestic NIM",
+      "value": 3.11,
+      "unit": "percent",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Operating profit",
+      "value": 31904.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Operating profit",
+      "value": 34226.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Loan loss provisions",
+      "value": 4132.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Loan loss provisions",
+      "value": 2759.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Profit after tax",
+      "value": 20160.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Profit after tax",
+      "value": 23038.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "SBI Key Summary of Q2FY27 Results",
+        "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
+        "reported_date": "2026-11-03"
       }
     }
   ]
