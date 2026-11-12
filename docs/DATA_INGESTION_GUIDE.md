@@ -68,3 +68,8 @@ The pilot should first cover FY2022–FY2026 annual periods, then add quarterly 
 - SBI: FY2022–FY2026 annual ROA, ROE, NIM, GNPA, NNPA and capital adequacy (30 records), sourced from SBI's official five-year financial highlights page.
 - ICICI Bank: FY2025–FY2026 PAT/average total assets, GNPA, NNPA and capital adequacy (8 records), sourced from ICRA's 23 Oct 2026 rating rationale, page 5. These ratios are ICRA-calculated; retain that provenance and do not assume definitions are identical to SBI's published ratios.
 - The dashboard shows blank cells for periods not yet loaded. A blank means unknown/not yet sourced, never zero.
+
+### Additional annual series loaded on 12 Nov 2026
+- ICICI Bank FY2022–FY2025: NIM, net NPA ratio based on customer assets, NII, standalone net profit and PBT excluding treasury income. Source: ICICI Bank Integrated Report FY2025 financial highlights (page 7), linked from the issuer's annual-report page. Amounts converted from ₹ billion to ₹ crore by multiplying by 100; the dashboard preserves the converted unit explicitly.
+- SBI FY2022–FY2026: deposits, advances, NII, operating profit, total provisions, net profit, EPS, year-end share price, year-end P/E and year-end P/B. Source: SBI official financial highlights page. Valuation observations are historical year-end figures, not current market valuation.
+- Cross-bank ratio panel uses the latest loaded annual observation and displays its period. It is a navigation aid only; source methodology and period differences mean the figures are not a validated peer ranking.
