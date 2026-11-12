@@ -36,16 +36,20 @@ export default {
         return json({ ok: true, count: results.length, companies: results });
       }
       if (url.pathname === "/api/facts") {
-        const symbol = (url.searchParams.get("symbol") || "").trim().toUpperCase();
-        if (!/^[A-Z0-9&.-]{1,20}$/.test(symbol)) return error("Provide a valid NSE symbol");
+        const rawSymbol = url.searchParams.get("symbol");
+        const symbol = rawSymbol === null ? "" : rawSymbol.trim().toUpperCase();
+        if (rawSymbol !== null && !/^[A-Z0-9&.-]{1,20}$/.test(symbol)) return error("Provide a valid NSE symbol");
         const rawLimit = url.searchParams.get("limit");
-        const parsedLimit = rawLimit === null || rawLimit === "" ? 500 : Number(rawLimit);
+        const defaultLimit = symbol ? 500 : 5000;
+        const parsedLimit = rawLimit === null || rawLimit === "" ? defaultLimit : Number(rawLimit);
         if (!Number.isInteger(parsedLimit) || parsedLimit < 1) return error("Limit must be a positive whole number");
-        const limit = Math.min(parsedLimit, 2000);
-        const { results } = await env.DB.prepare(
-          "SELECT f.symbol, c.company_name, c.sector, f.period, f.period_type, f.consolidation, f.metric, f.value, f.unit, f.currency, s.source_name, s.source_url, s.reported_date, s.retrieved_at FROM financial_facts f JOIN companies c ON c.symbol = f.symbol JOIN sources s ON s.source_id = f.source_id WHERE f.symbol = ? ORDER BY f.period_type, f.period DESC, f.metric LIMIT ?"
-        ).bind(symbol, limit).all();
-        return json({ ok: true, symbol, count: results.length, facts: results });
+        const limit = Math.min(parsedLimit, symbol ? 2000 : 10000);
+        const sql = "SELECT f.symbol, c.company_name, c.sector, f.period, f.period_type, f.consolidation, f.metric, f.value, f.unit, f.currency, s.source_name, s.source_url, s.reported_date, s.retrieved_at FROM financial_facts f JOIN companies c ON c.symbol = f.symbol JOIN sources s ON s.source_id = f.source_id " +
+          (symbol ? "WHERE f.symbol = ? " : "") +
+          "ORDER BY f.symbol, f.period_type, f.period DESC, f.metric LIMIT ?";
+        const statement = env.DB.prepare(sql);
+        const { results } = await (symbol ? statement.bind(symbol, limit) : statement.bind(limit)).all();
+        return json({ ok: true, symbol: symbol || null, count: results.length, facts: results });
       }
       if (url.pathname === "/api/metrics") {
         const symbol = (url.searchParams.get("symbol") || "").trim().toUpperCase();
