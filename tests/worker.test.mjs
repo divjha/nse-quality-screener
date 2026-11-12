@@ -36,7 +36,9 @@ test("health endpoint works without a database binding", async () => {
   const { status, body } = await readJson(await worker.fetch(makeRequest("/health"), {}));
   assert.equal(status, 200);
   assert.equal(body.ok, true);
-  assert.equal(body.service, "Northstar Equity API");\n  assert.equal(body.databaseConfigured, false);\n  assert.equal(body.dataMode, "unconfigured");
+  assert.equal(body.service, "Northstar Equity API");
+  assert.equal(body.databaseConfigured, false);
+  assert.equal(body.dataMode, "unconfigured");
 });
 
 test("API is read-only and rejects non-GET methods", async () => {
@@ -57,7 +59,13 @@ test("facts route validates the symbol before querying", async () => {
   assert.match(body.error, /valid NSE symbol/);
 });
 
-test("facts route rejects invalid limits", async () => {\n  const { status, body } = await readJson(await worker.fetch(makeRequest("/api/facts?symbol=SBIN&limit=abc"), mockEnv()));\n  assert.equal(status, 400);\n  assert.match(body.error, /positive whole number/);\n});\n\ntest("analysis calculates YoY only for matching period and consolidation basis", async () => {
+test("facts route rejects invalid limits", async () => {
+  const { status, body } = await readJson(await worker.fetch(makeRequest("/api/facts?symbol=SBIN&limit=abc"), mockEnv()));
+  assert.equal(status, 400);
+  assert.match(body.error, /positive whole number/);
+});
+
+test("analysis calculates YoY only for matching period and consolidation basis", async () => {
   const { status, body } = await readJson(await worker.fetch(makeRequest("/api/analysis?symbol=SBIN"), mockEnv()));
   assert.equal(status, 200);
   const quarter = body.analysis.find(x => x.metric === "Revenue" && x.period === "Q2 FY2027");
