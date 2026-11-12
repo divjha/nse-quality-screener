@@ -59,9 +59,9 @@ export default {
         ).bind(symbol).all();
 
         const periodInfo = (period, type) => {
-          const q = /^Q([1-4])\\s+FY(\\d{4})$/i.exec(period || "");
+          const q = /^Q([1-4])\s+FY(\d{4})$/i.exec(period || "");
           if (q && type === "quarterly") return { key: "Q" + q[1], year: Number(q[2]) };
-          const y = /^FY(\\d{4})$/i.exec(period || "");
+          const y = /^FY(\d{4})$/i.exec(period || "");
           if (y && type === "annual") return { key: "FY", year: Number(y[1]) };
           return null;
         };
