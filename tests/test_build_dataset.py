@@ -17,6 +17,7 @@ class DatasetBuilderTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         root = Path(self.temp.name)
+        builder.ROOT = root
         builder.INBOX = root / "data" / "inbox"
         builder.OUT = root / "data" / "generated"
         builder.INPUT = builder.INBOX / "financial_facts.csv"
