@@ -73,3 +73,11 @@ The pilot should first cover FY2022–FY2026 annual periods, then add quarterly 
 - ICICI Bank FY2022–FY2025: NIM, net NPA ratio based on customer assets, NII, standalone net profit and PBT excluding treasury income. Source: ICICI Bank Integrated Report FY2025 financial highlights (page 7), linked from the issuer's annual-report page. Amounts converted from ₹ billion to ₹ crore by multiplying by 100; the dashboard preserves the converted unit explicitly.
 - SBI FY2022–FY2026: deposits, advances, NII, operating profit, total provisions, net profit, EPS, year-end share price, year-end P/E and year-end P/B. Source: SBI official financial highlights page. Valuation observations are historical year-end figures, not current market valuation.
 - Cross-bank ratio panel uses the latest loaded annual observation and displays its period. It is a navigation aid only; source methodology and period differences mean the figures are not a validated peer ranking.
+
+## Bank ratio interpretation safeguards
+- GNPA ratio = gross NPAs / gross advances; NNPA ratio = net NPAs / net advances. Lower values generally indicate better asset quality, but source basis, domestic/global scope, and calculation conventions must match before comparing.
+- CRAR is capital relative to risk-weighted assets. It is a loss-absorption/capital buffer indicator, not a profitability metric.
+- NIM measures net interest income relative to an average earning-asset base; banks and sources may use different denominators and domestic/global scopes.
+- RBI's NPA definitions use regulatory overdue/out-of-order criteria; do not treat a reported ratio as interchangeable if source scope or denominator differs.
+- Growth CAGR in the dashboard is calculated only between the earliest and latest loaded positive annual observations, using elapsed fiscal years. It is backward-looking and is not a forecast.
+- RBI reference: https://www.rbi.org.in/scripts/DataDefinition.aspx and https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=23639
