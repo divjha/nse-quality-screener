@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T12:36:45.090261+00:00",
+  "generated_at": "2026-11-12T12:38:14.021306+00:00",
   "input_file": "data/inbox/financial_facts.csv",
-  "input_sha256": "7dfa115b7999cbb7c80d60c6c84ba7fb6d8e1351b8173bf9b4f9079c2f359f7a",
-  "record_count": 170,
+  "input_sha256": "8cb01373b9491d4161d5a7864f69c62c48575f11f29f28c2ba1ae5dbc4a1d5f9",
+  "record_count": 177,
   "records": [
     {
       "symbol": "ICICIBANK",
@@ -3063,6 +3063,132 @@
         "name": "L&T Q2/H1 FY2027 analyst presentation",
         "url": "https://investors.larsentoubro.com/upload/AnalystPres/FY2027AnalystPresL%26T%20Q2%20FY27%20Analyst%20Presentation.pdf",
         "reported_date": "2026-10-27"
+      }
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "isin": "INE044A01036",
+      "company_name": "Sun Pharmaceutical Industries",
+      "sector": "Healthcare",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Sales",
+      "value": 16100.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "Sun Pharma Q2 FY2027 official earnings call transcript",
+        "url": "https://sunpharma.com/wp-content/uploads/2026/11/FY27-Q2-Earnings-Call-Transcript.pdf",
+        "reported_date": "2026-10-30"
+      }
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "isin": "INE044A01036",
+      "company_name": "Sun Pharmaceutical Industries",
+      "sector": "Healthcare",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "EBITDA",
+      "value": 4743.9,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "Sun Pharma Q2 FY2027 official earnings call transcript",
+        "url": "https://sunpharma.com/wp-content/uploads/2026/11/FY27-Q2-Earnings-Call-Transcript.pdf",
+        "reported_date": "2026-10-30"
+      }
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "isin": "INE044A01036",
+      "company_name": "Sun Pharmaceutical Industries",
+      "sector": "Healthcare",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "EBITDA margin",
+      "value": 29.3,
+      "unit": "percent",
+      "currency": "INR",
+      "source": {
+        "name": "Sun Pharma Q2 FY2027 official earnings call transcript",
+        "url": "https://sunpharma.com/wp-content/uploads/2026/11/FY27-Q2-Earnings-Call-Transcript.pdf",
+        "reported_date": "2026-10-30"
+      }
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "isin": "INE044A01036",
+      "company_name": "Sun Pharmaceutical Industries",
+      "sector": "Healthcare",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Reported PAT",
+      "value": 1988.5,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "Sun Pharma Q2 FY2027 official earnings call transcript",
+        "url": "https://sunpharma.com/wp-content/uploads/2026/11/FY27-Q2-Earnings-Call-Transcript.pdf",
+        "reported_date": "2026-10-30"
+      }
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "isin": "INE044A01036",
+      "company_name": "Sun Pharmaceutical Industries",
+      "sector": "Healthcare",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Adjusted PAT",
+      "value": 3162.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "Sun Pharma Q2 FY2027 official earnings call transcript",
+        "url": "https://sunpharma.com/wp-content/uploads/2026/11/FY27-Q2-Earnings-Call-Transcript.pdf",
+        "reported_date": "2026-10-30"
+      }
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "isin": "INE044A01036",
+      "company_name": "Sun Pharmaceutical Industries",
+      "sector": "Healthcare",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "EPS",
+      "value": 8.3,
+      "unit": "INR",
+      "currency": "INR",
+      "source": {
+        "name": "Sun Pharma Q2 FY2027 official earnings call transcript",
+        "url": "https://sunpharma.com/wp-content/uploads/2026/11/FY27-Q2-Earnings-Call-Transcript.pdf",
+        "reported_date": "2026-10-30"
+      }
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "isin": "INE044A01036",
+      "company_name": "Sun Pharmaceutical Industries",
+      "sector": "Healthcare",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "R&D investment",
+      "value": 778.4,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "Sun Pharma Q2 FY2027 official earnings call transcript",
+        "url": "https://sunpharma.com/wp-content/uploads/2026/11/FY27-Q2-Earnings-Call-Transcript.pdf",
+        "reported_date": "2026-10-30"
       }
     }
   ]
