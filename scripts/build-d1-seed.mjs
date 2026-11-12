@@ -10,7 +10,7 @@ if (!Array.isArray(dataset.records) || dataset.records.length === 0) {
 }
 
 const quote = (value) => "'" + String(value ?? "").replace(/'/g, "''") + "'";
-const validDate = (value) => /^\\d{4}-\\d{2}-\\d{2}$/.test(String(value || ""));
+const validDate = (value) => /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
 const statements = [
   "-- Generated from data/generated/financial_facts.json. Re-runnable; no source facts are deleted.",
 ];
