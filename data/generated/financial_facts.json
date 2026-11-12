@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T10:26:16.496234+00:00",
+  "generated_at": "2026-11-12T10:29:37.024337+00:00",
   "input_file": "data/inbox/financial_facts.csv",
-  "input_sha256": "a9d274aa4b4a2902560301cec3d1bdb4646403c88fe5ac7a62c315caa642dee2",
-  "record_count": 154,
+  "input_sha256": "f5778909d0c3e264fbdbafe1902e6b98c19f55c12f17241ab77872e9d0485516",
+  "record_count": 161,
   "records": [
     {
       "symbol": "ICICIBANK",
@@ -2775,6 +2775,132 @@
         "name": "ITC Q2 FY2027 official consolidated results presentation",
         "url": "https://itcportal.com/content/dam/itc-corporate/pdfs/financial-result/quarterly-results-2026-2027/september-2026/ITC-Quarterly-Result-Presentation-Q2-FY2027.pdf",
         "reported_date": "2026-11-02"
+      }
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "isin": "INE030A01027",
+      "company_name": "Hindustan Unilever",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Turnover",
+      "value": 18071.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "HUL Q2 FY2027 results release",
+        "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/",
+        "reported_date": "2026-10-28"
+      }
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "isin": "INE030A01027",
+      "company_name": "Hindustan Unilever",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "EBITDA",
+      "value": 4089.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "HUL Q2 FY2027 results release",
+        "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/",
+        "reported_date": "2026-10-28"
+      }
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "isin": "INE030A01027",
+      "company_name": "Hindustan Unilever",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "EBITDA margin",
+      "value": 22.6,
+      "unit": "percent",
+      "currency": "INR",
+      "source": {
+        "name": "HUL Q2 FY2027 results release",
+        "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/",
+        "reported_date": "2026-10-28"
+      }
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "isin": "INE030A01027",
+      "company_name": "Hindustan Unilever",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Underlying sales growth",
+      "value": 15.0,
+      "unit": "percent",
+      "currency": "INR",
+      "source": {
+        "name": "HUL Q2 FY2027 results release",
+        "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/",
+        "reported_date": "2026-10-28"
+      }
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "isin": "INE030A01027",
+      "company_name": "Hindustan Unilever",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "Underlying volume growth",
+      "value": 7.0,
+      "unit": "percent",
+      "currency": "INR",
+      "source": {
+        "name": "HUL Q2 FY2027 results release",
+        "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/",
+        "reported_date": "2026-10-28"
+      }
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "isin": "INE030A01027",
+      "company_name": "Hindustan Unilever",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "PAT",
+      "value": 2796.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "HUL Q2 FY2027 results release",
+        "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/",
+        "reported_date": "2026-10-28"
+      }
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "isin": "INE030A01027",
+      "company_name": "Hindustan Unilever",
+      "sector": "Consumer",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "consolidated",
+      "metric": "PAT before exceptional items",
+      "value": 2795.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "HUL Q2 FY2027 results release",
+        "url": "https://www.hul.co.in/news/press-releases/2026/results-for-the-quarter-ended-30th-september-2026/",
+        "reported_date": "2026-10-28"
       }
     }
   ]
