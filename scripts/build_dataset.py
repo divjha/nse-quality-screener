@@ -22,8 +22,8 @@ OUTPUT = OUT / "financial_facts.json"
 REPORT = OUT / "data_quality_report.json"
 
 REQUIRED = ["symbol", "company_name", "sector", "period", "period_type",
-            "consolidation", "metric", "value", "unit", "source_name",
-            "source_url", "reported_date"]
+            "consolidation", "metric", "value", "unit", "currency", "source_name",
+            "source_url", "reported_date", "isin"]
 PERIOD_TYPES = {"quarterly", "annual", "half-yearly", "ttm"}
 CONSOLIDATION = {"consolidated", "standalone", "not_applicable"}
 ALLOWED_UNITS = {"percent", "INR", "INR_crore", "INR_lakh", "times",
