@@ -42,3 +42,24 @@ It runs on manual dispatch, when the input CSV or parser changes, and weekly on 
 - Raw source documents should be retained separately; this first pipeline records provenance but does not archive third-party documents.
 - Next: add issuer/ISIN master mapping, XBRL parsing, PDF extraction with human review, historical period reconciliation, then connect generated facts to the dashboard.
 - Never add API tokens or credentials to repository files. If a future provider requires credentials, use GitHub Actions Secrets and review its licence and permitted usage first.
+
+
+## Pilot universe and source register
+The initial 10-company pilot is listed in `data/reference/pilot_companies.csv`. It records NSE symbols, sector labels and issuer/exchange source landing pages. These URLs are source discovery starting points, not evidence that financial facts have already been extracted or verified. No financial values are preloaded by this registry.
+
+Preferred source order:
+1. Issuer annual report / integrated report and audited financial statements.
+2. Issuer quarterly results and earnings presentations for interim context.
+3. NSE/BSE corporate filings as the exchange-submitted record.
+4. Secondary aggregators only as a cross-check, never as the sole source for a published fact.
+
+For every extracted value, record the exact document URL and page/table reference in the working extraction notes. Keep standalone and consolidated values separate. Preserve original units and convert only through a documented, tested transformation. Treat restatements, demergers, acquisitions, fiscal-year differences and discontinued operations as comparability flags.
+
+### Sector-specific extraction priorities
+- Banks: deposits, advances, NIM, ROA, ROE, GNPA, NNPA, slippages, credit cost, provision coverage, CASA and capital adequacy.
+- IT services: revenue, constant-currency growth, EBIT margin, attrition, large-deal TCV, cash conversion and client concentration.
+- Consumer: volume growth, revenue growth, gross margin, EBITDA margin, working capital, ROCE and segment mix.
+- Industrials: revenue, EBITDA margin, order inflow, order book, execution, working capital, net debt and ROCE.
+- Pharmaceuticals: revenue by geography/business, product concentration, R&D, gross margin, EBITDA margin, cash conversion, regulatory observations and acquisition effects.
+
+The pilot should first cover FY2022–FY2026 annual periods, then add quarterly periods where comparable and available. Do not calculate a five-year trend from inconsistent or unreconciled periods.
