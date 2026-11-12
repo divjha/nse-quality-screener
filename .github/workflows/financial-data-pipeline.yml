@@ -69,12 +69,22 @@ jobs:
             git commit -m "Build validated financial facts dataset"
             pushed=false
             for attempt in 1 2 3 4 5; do
-              git pull --rebase origin "${GITHUB_REF_NAME}"
+              if ! git pull --rebase origin "${GITHUB_REF_NAME}"; then
+                echo "Generated-file rebase conflict; rebuilding from the latest branch."
+                git rebase --abort || true
+                git fetch origin "${GITHUB_REF_NAME}"
+                git reset --hard "origin/${GITHUB_REF_NAME}"
+                python scripts/build_dataset.py
+                git add data/generated/financial_facts.json data/generated/data_quality_report.json
+                if ! git diff --cached --quiet; then
+                  git commit -m "Build validated financial facts dataset"
+                fi
+              fi
               if git push; then
                 pushed=true
                 break
               fi
-              echo "Push attempt ${attempt} failed; retrying after refreshing remote."
+              echo "Push attempt ${attempt} failed; refreshing and retrying."
               sleep 2
             done
             if [ "${pushed}" != "true" ]; then
