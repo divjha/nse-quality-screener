@@ -41,3 +41,9 @@ Cloudflare free-tier limits are not unlimited. Monitor requests, CPU, D1 reads/w
 ## Data-source policy
 
 This API does not scrape NSE pages or pretend to have a live quote feed. Financial facts must retain source URL, reporting date, period, unit, currency and consolidation basis. Market prices require a permitted provider with explicit access and usage terms. No provider key is required by this initial scaffold.
+
+## Frontend connection and fallback
+
+The Data Centre includes an optional API base URL field. Leave it blank to keep using the published static JSON dataset. After a Worker and D1 database are actually deployed and seeded, enter the HTTPS Worker base URL and use **Test connection**. The frontend checks `/health`, reads `/api/companies`, then loads each company's facts from `/api/facts`. If the API is unavailable or the database is not configured, it falls back to the static dataset and shows that state in the connection status.
+
+The API URL is stored in browser localStorage only. No credentials or API tokens are requested or stored. The static fallback remains the default until the user configures a URL.
