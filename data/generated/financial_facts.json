@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T09:40:11.600465+00:00",
+  "generated_at": "2026-11-12T10:06:15.305776+00:00",
   "input_file": "data/inbox/financial_facts.csv",
-  "input_sha256": "8a9bb69d45dd3dd090d5f5a188900a90170a2395889e53c50471bdc02d37c62b",
-  "record_count": 18,
+  "input_sha256": "38cc591e448ac7015d519d2b5e851f6bb84f4bfb2c553b8e027557d62db6dca4",
+  "record_count": 48,
   "records": [
     {
       "symbol": "ICICIBANK",
@@ -327,6 +327,546 @@
         "name": "SBI Key Summary of Q2FY27 Results",
         "url": "https://sbi.bank.in/documents/17836/0/SBI%2BPress%2BRelease%2BQ2FY27_03112026.pdf/576f87c8-635a-4099-6ece-db72ac2bed23?t=1793695786986",
         "reported_date": "2026-11-03"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2022",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROA",
+      "value": 0.67,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2023",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROA",
+      "value": 0.96,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2024",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROA",
+      "value": 1.04,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2025",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROA",
+      "value": 1.1,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2026",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROA",
+      "value": 1.12,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2022",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROE",
+      "value": 13.92,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2023",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROE",
+      "value": 19.43,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2024",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROE",
+      "value": 20.32,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2025",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROE",
+      "value": 19.87,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2026",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "ROE",
+      "value": 18.57,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2022",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NIM",
+      "value": 3.12,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2023",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NIM",
+      "value": 3.37,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2024",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NIM",
+      "value": 3.28,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2025",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NIM",
+      "value": 3.09,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2026",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NIM",
+      "value": 2.91,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2022",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "GNPA",
+      "value": 3.97,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2023",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "GNPA",
+      "value": 2.78,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2024",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "GNPA",
+      "value": 2.24,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2025",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "GNPA",
+      "value": 1.82,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2026",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "GNPA",
+      "value": 1.49,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2022",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NNPA",
+      "value": 1.02,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2023",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NNPA",
+      "value": 0.67,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2024",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NNPA",
+      "value": 0.57,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2025",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NNPA",
+      "value": 0.47,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2026",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "NNPA",
+      "value": 0.39,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2022",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "Capital adequacy ratio",
+      "value": 13.83,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2023",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "Capital adequacy ratio",
+      "value": 14.68,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2024",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "Capital adequacy ratio",
+      "value": 14.28,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2025",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "Capital adequacy ratio",
+      "value": 14.25,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
+      }
+    },
+    {
+      "symbol": "SBIN",
+      "isin": "INE062A01020",
+      "company_name": "State Bank of India",
+      "sector": "Bank",
+      "period": "FY2026",
+      "period_type": "annual",
+      "consolidation": "standalone",
+      "metric": "Capital adequacy ratio",
+      "value": 15.4,
+      "unit": "percent",
+      "currency": null,
+      "source": {
+        "name": "SBI Financial Highlights Past 5 Years",
+        "url": "https://sbi.bank.in/en/web/investor-relations/sbi-financial-highlights-past-5",
+        "reported_date": "2026-06-08"
       }
     }
   ]
