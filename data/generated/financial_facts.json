@@ -1,8 +1,153 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T09:34:42.537796+00:00",
+  "generated_at": "2026-11-12T09:38:19.937212+00:00",
   "input_file": "data/inbox/financial_facts.csv",
-  "input_sha256": "70e3ab61b2ed3bbcd5f4749908e8ea1571127c566fa1c349ac4416ed12f1be50",
-  "record_count": 0,
-  "records": []
+  "input_sha256": "d714c3c89327c13932d99d5b2ac7978b57045b10b6b73faefa86ed12f5725f96",
+  "record_count": 8,
+  "records": [
+    {
+      "symbol": "ICICIBANK",
+      "isin": "",
+      "company_name": "ICICI Bank",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "NII",
+      "value": 21529.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ICICI Bank Q2 FY2027 Performance Review",
+        "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
+        "reported_date": "2026-10-17"
+      }
+    },
+    {
+      "symbol": "ICICIBANK",
+      "isin": "",
+      "company_name": "ICICI Bank",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "NII",
+      "value": 25339.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ICICI Bank Q2 FY2027 Performance Review",
+        "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
+        "reported_date": "2026-10-17"
+      }
+    },
+    {
+      "symbol": "ICICIBANK",
+      "isin": "",
+      "company_name": "ICICI Bank",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Core operating profit",
+      "value": 17078.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ICICI Bank Q2 FY2027 Performance Review",
+        "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
+        "reported_date": "2026-10-17"
+      }
+    },
+    {
+      "symbol": "ICICIBANK",
+      "isin": "",
+      "company_name": "ICICI Bank",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Core operating profit",
+      "value": 20805.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ICICI Bank Q2 FY2027 Performance Review",
+        "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
+        "reported_date": "2026-10-17"
+      }
+    },
+    {
+      "symbol": "ICICIBANK",
+      "isin": "",
+      "company_name": "ICICI Bank",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Provisions",
+      "value": 914.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ICICI Bank Q2 FY2027 Performance Review",
+        "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
+        "reported_date": "2026-10-17"
+      }
+    },
+    {
+      "symbol": "ICICIBANK",
+      "isin": "",
+      "company_name": "ICICI Bank",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "Provisions",
+      "value": 851.0,
+      "unit": "INR_crore",
+      "currency": "INR",
+      "source": {
+        "name": "ICICI Bank Q2 FY2027 Performance Review",
+        "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
+        "reported_date": "2026-10-17"
+      }
+    },
+    {
+      "symbol": "ICICIBANK",
+      "isin": "",
+      "company_name": "ICICI Bank",
+      "sector": "Bank",
+      "period": "Q2 FY2026",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "NIM",
+      "value": 4.3,
+      "unit": "percent",
+      "currency": "INR",
+      "source": {
+        "name": "ICICI Bank Q2 FY2027 Performance Review",
+        "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
+        "reported_date": "2026-10-17"
+      }
+    },
+    {
+      "symbol": "ICICIBANK",
+      "isin": "",
+      "company_name": "ICICI Bank",
+      "sector": "Bank",
+      "period": "Q2 FY2027",
+      "period_type": "quarterly",
+      "consolidation": "standalone",
+      "metric": "NIM",
+      "value": 4.18,
+      "unit": "percent",
+      "currency": "INR",
+      "source": {
+        "name": "ICICI Bank Q2 FY2027 Performance Review",
+        "url": "https://www.icici.bank.in/about-us/news-room/2026/performance-review-quarter-ended-september-30-2026",
+        "reported_date": "2026-10-17"
+      }
+    }
+  ]
 }
