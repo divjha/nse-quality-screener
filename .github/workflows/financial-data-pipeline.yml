@@ -6,6 +6,11 @@ on:
     paths:
       - "data/inbox/financial_facts.csv"
       - "scripts/build_dataset.py"
+      - "scripts/build-d1-seed.mjs"
+      - "worker/**"
+      - "migrations/**"
+      - "package.json"
+      - "wrangler.toml"
       - ".github/workflows/financial-data-pipeline.yml"
   schedule:
     - cron: "25 3 * * 1"
@@ -31,6 +36,20 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Validate and build financial dataset
         run: python scripts/build_dataset.py
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check API and D1 seed generator syntax
+        run: |
+          node --check worker/index.js
+          node --check scripts/build-d1-seed.mjs
+      - name: Validate dataset-to-D1 import generation
+        run: |
+          node scripts/build-d1-seed.mjs
+          test -s data/generated/d1_seed.sql
+          grep -q "INSERT OR IGNORE INTO financial_facts" data/generated/d1_seed.sql
+          rm data/generated/d1_seed.sql
       - name: Commit generated dataset
         run: |
           git config user.name "github-actions[bot]"
