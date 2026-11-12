@@ -6,8 +6,12 @@
   "scripts": {
     "dev:api": "wrangler dev",
     "deploy:api": "wrangler deploy",
-    "db:local": "wrangler d1 migrations apply northstar-db --local",
-    "db:remote": "wrangler d1 migrations apply northstar-db --remote"
+    "db:local": "wrangler d1 migrations apply northstar-equity --local",
+    "db:remote": "wrangler d1 migrations apply northstar-equity --remote",
+    "seed:local": "node scripts/build-d1-seed.mjs && wrangler d1 execute northstar-equity --local --file=data/generated/d1_seed.sql",
+    "check:local": "wrangler d1 execute northstar-equity --local --command=\"SELECT COUNT(*) AS facts FROM financial_facts; SELECT COUNT(*) AS companies FROM companies;\""
   },
-  "devDependencies": { "wrangler": "^4.0.0" }
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
 }
