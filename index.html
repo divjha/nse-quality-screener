@@ -22,7 +22,7 @@ Other:[['revenue','Revenue growth (%)'],['margin','Operating margin (%)'],['prof
 function esc(s){return String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]))}
 function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
 function page(id){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===id));window.scrollTo(0,0)}
-$('nav').onclick=e=>{let b=e.target.closest('button[data-page]');if(b)page(b.dataset.page)};
+$('nav').onclick=e=>{let b=e.target.closest('button[data-page]');if(b){page(b.dataset.page);if(b.dataset.page==='data')loadPublishedFacts()}};
 function fields(v={}){$('metrics').innerHTML=sets[$('sector').value].map(x=>'<div><label>'+x[1]+'</label><input id="m_'+x[0]+'" type="number" step="any" placeholder="Unknown" value="'+(v[x[0]]??'')+'"></div>').join('')}
 $('sector').onchange=()=>fields();
 function vals(){let o={};sets[$('sector').value].forEach(x=>{let v=$('m_'+x[0]).value;o[x[0]]=v===''?null:Number(v)});return o}
