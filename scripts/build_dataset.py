@@ -135,7 +135,7 @@ def main():
     REPORT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({"accepted": len(rows), "rejected": len(errors),
                       "warnings": len(warnings) + len(duplicates),
-                      "output": str(OUTPUT.relative_to(ROOT))}, indent=2))
+                      "output": OUTPUT.as_posix()}, indent=2))
     # Invalid rows fail the workflow so bad data is not silently published.
     if errors:
         raise SystemExit("Data validation failed. Review data_quality_report.json")
