@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T12:25:39.165181+00:00",
+  "generated_at": "2026-11-12T12:25:55.921421+00:00",
   "input_file": "data/inbox/financial_facts.csv",
   "input_sha256": "7dfa115b7999cbb7c80d60c6c84ba7fb6d8e1351b8173bf9b4f9079c2f359f7a",
   "record_count": 170,
