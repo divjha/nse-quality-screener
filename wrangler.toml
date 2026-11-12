@@ -9,5 +9,6 @@ APP_ENV = "development"
 [[d1_databases]]
 binding = "DB"
 database_name = "northstar-equity"
-database_id = "REPLACE_WITH_CLOUDFLARE_D1_DATABASE_ID"
+# Local-only placeholder UUID. Replace with the real ID only after creating a Cloudflare D1 database.
+database_id = "00000000-0000-0000-0000-000000000001"
 migrations_dir = "migrations"
