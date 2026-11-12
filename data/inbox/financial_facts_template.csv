@@ -1,0 +1,2 @@
+symbol,isin,company_name,sector,period,period_type,consolidation,metric,value,unit,currency,source_name,source_url,reported_date
+ICICIBANK,INE090A01021,ICICI Bank,Bank,Q2 FY27,quarterly,consolidated,ROA,2.1,percent,INR,Company filing,https://www.icicibank.com/,2026-10-25
