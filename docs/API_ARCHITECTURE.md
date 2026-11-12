@@ -12,7 +12,7 @@
 
 - GET /health — service health.
 - GET /api/companies — published company directory and fact counts.
-- GET /api/facts?symbol=SBIN — source-linked facts for one company.
+- GET /api/facts?symbol=SBIN — source-linked facts for one company; omit `symbol` to fetch the published universe in one request (limit capped at 10,000).
 - GET /api/metrics?symbol=SBIN&metric=ROA — time series for a metric.
 - GET /api/analysis?symbol=SBIN — year-over-year comparisons only where the same metric, fiscal period, period type and consolidation basis exist.
 
@@ -44,6 +44,6 @@ This API does not scrape NSE pages or pretend to have a live quote feed. Financi
 
 ## Frontend connection and fallback
 
-The Data Centre includes an optional API base URL field. Leave it blank to keep using the published static JSON dataset. After a Worker and D1 database are actually deployed and seeded, enter the HTTPS Worker base URL and use **Test connection**. The frontend checks `/health`, reads `/api/companies`, then loads each company's facts from `/api/facts`. If the API is unavailable or the database is not configured, it falls back to the static dataset and shows that state in the connection status.
+The Data Centre includes an optional API base URL field. Leave it blank to keep using the published static JSON dataset. After a Worker and D1 database are actually deployed and seeded, enter the HTTPS Worker base URL and use **Test connection**. The frontend checks `/health`, reads `/api/companies`, then fetches the published facts in one `/api/facts?limit=10000` request to avoid one request per company. If the API is unavailable or the database is not configured, it falls back to the static dataset and shows that state in the connection status.
 
 The API URL is stored in browser localStorage only. No credentials or API tokens are requested or stored. The static fallback remains the default until the user configures a URL.
