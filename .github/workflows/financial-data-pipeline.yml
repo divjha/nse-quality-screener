@@ -8,6 +8,7 @@ on:
       - "scripts/build_dataset.py"
       - "scripts/build-d1-seed.mjs"
       - "worker/**"
+      - "tests/**"
       - "migrations/**"
       - "package.json"
       - "wrangler.toml"
@@ -44,6 +45,9 @@ jobs:
         run: |
           node --check worker/index.js
           node --check scripts/build-d1-seed.mjs
+          node --check tests/worker.test.mjs
+      - name: Run Worker API tests
+        run: npm run test:api
       - name: Validate dataset-to-D1 import generation
         run: |
           node scripts/build-d1-seed.mjs
@@ -59,7 +63,6 @@ jobs:
             echo "No generated data changes."
           else
             git commit -m "Build validated financial facts dataset"
-            # Retry if a concurrent repository update lands between fetch and push.
             pushed=false
             for attempt in 1 2 3 4 5; do
               git pull --rebase origin "${GITHUB_REF_NAME}"
